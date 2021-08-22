@@ -49,6 +49,12 @@ private:
 
     Direction m_currentDirection;
     std::list<Segment> m_segments;
+
+    bool isEatingItself(Segment head);
+    bool isBorderAchieved(Segment head);
+    bool isRequestedFoodCollidedWithSnake(FoodInd food);
+    bool isRequestedFoodCollidedWithSnake_2(FoodResp food);
+    void handleTimerEvent(const Snake::TimeoutInd& e);
 };
 
 } // namespace Snake
